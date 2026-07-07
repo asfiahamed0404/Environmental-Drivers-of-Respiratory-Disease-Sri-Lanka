@@ -35,6 +35,19 @@ On Windows, you can also force the local environment explicitly:
 .\.venv\Scripts\python.exe pipeline.py
 ```
 
+## Running on Google Colab
+
+1. **Runtime → Change runtime type** → Hardware accelerator: **CPU**, Runtime version: **2026.04** → Save.
+2. Clone the repo and enter it:
+   ```python
+   !git clone https://github.com/asfiahamed0404/Environmental-Drivers-of-Respiratory-Disease-Sri-Lanka.git
+   %cd Environmental-Drivers-of-Respiratory-Disease-Sri-Lanka
+   ```
+3. Run the pipeline:
+   ```python
+   !python pipeline.py
+   ```
+
 ## What It Produces
 
 The pipeline generates the engineered dataset, runs model training, computes SHAP explanations, and writes the final FAH ranking tables and plots.
@@ -47,4 +60,4 @@ The pipeline generates the engineered dataset, runs model training, computes SHA
 
 ## Reproducibility
 
-To reproduce the paper's exact reported numbers, run the pipeline on Google Colab (runtime snapshot **2026.04**) with the pinned package versions in [requirements.txt](requirements.txt) rather than a local environment.
+To reproduce the paper's exact reported numbers, run the pipeline on Google Colab (runtime snapshot **2026.04**) rather than a local environment.

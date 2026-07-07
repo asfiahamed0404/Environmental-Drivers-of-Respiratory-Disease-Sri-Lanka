@@ -33,6 +33,26 @@ If you want to force the local environment explicitly on Windows:
 .\.venv\Scripts\python.exe pipeline.py
 ```
 
+## Running on Google Colab
+
+1. **Runtime → Change runtime type** → Hardware accelerator: **CPU**, Runtime version: **2026.04** → Save.
+2. Clone the repo and enter it:
+   ```python
+   !git clone https://github.com/asfiahamed0404/Environmental-Drivers-of-Respiratory-Disease-Sri-Lanka.git
+   %cd Environmental-Drivers-of-Respiratory-Disease-Sri-Lanka
+   ```
+3. Verify the pinned versions are already present in this runtime:
+   ```python
+   import numpy, sklearn, xgboost, shap
+   print(numpy.__version__, sklearn.__version__, xgboost.__version__, shap.__version__)
+   # Expected: 2.0.2 1.6.1 3.2.0 0.51.0
+   ```
+   If any version doesn't match, run `!pip install -r requirements.txt` before proceeding.
+4. Run the pipeline:
+   ```python
+   !python pipeline.py
+   ```
+
 ## What the Pipeline Does
 
 1. Downloads the raw CSV from the Hugging Face dataset `shazan18/environmental-drivers-respiratory-disease-sri-lanka` as part of `EDA-and-Analysis-3/research_analysis_final.py`.
