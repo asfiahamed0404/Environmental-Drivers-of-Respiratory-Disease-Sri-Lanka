@@ -47,4 +47,4 @@ The pipeline generates the engineered dataset, runs model training, computes SHA
 
 ## Reproducibility
 
-To reproduce the paper's exact reported numbers, run the pipeline on Google Colab with the pinned package versions in [requirements.txt](requirements.txt) rather than a local environment.
+To reproduce the paper's exact reported numbers, run the pipeline on Google Colab (runtime snapshot **2026.04**) with the pinned package versions in [requirements.txt](requirements.txt) rather than a local environment.
