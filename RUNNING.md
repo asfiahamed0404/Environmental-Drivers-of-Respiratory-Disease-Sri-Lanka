@@ -77,6 +77,7 @@ The model pipeline expects these pinned packages:
 ## Notes
 
 - The engineered dataset must exist in `Model/dataset_feature_engineered.csv` before the model step starts.
+- No manual dataset download is needed — the pipeline automatically fetches the raw dataset from Hugging Face on first run.
 - The model script reads `dataset_feature_engineered.csv` using a relative path, so it must be launched from the `Model/` folder. The pipeline handles this automatically.
 - The raw EDA data is fetched from Hugging Face first and falls back to the local CSV only if the download is unavailable.
 - If you rerun the pipeline, it will regenerate the engineered dataset and then rerun the model end-to-end.

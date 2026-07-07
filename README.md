@@ -38,6 +38,7 @@ The pipeline generates the engineered dataset, runs model training, computes SHA
 ## Notes
 
 - The model step must run from the `Model/` folder so its relative dataset path resolves correctly.
+- No manual dataset download is needed — `pipeline.py` automatically fetches the raw dataset from Hugging Face on first run.
 - The EDA stage downloads the raw CSV from Hugging Face and falls back to `Data/final_cleaned_dataset.csv` if needed.
 - The engineered dataset must exist in `Model/dataset_feature_engineered.csv` before model training starts.
 
