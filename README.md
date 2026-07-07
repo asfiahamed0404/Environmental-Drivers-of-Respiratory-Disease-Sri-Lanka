@@ -8,7 +8,7 @@ This project analyzes environmental drivers of respiratory disease across 25 dis
 - [EDA-and-Analysis-3/research_analysis_final.py](EDA-and-Analysis-3/research_analysis_final.py): generates the engineered dataset.
 - [Model/model_pipeline.py](Model/model_pipeline.py): trains the model and produces the final outputs.
 - [requirements.txt](requirements.txt): pinned Python dependencies.
-- [RUNNING.md](RUNNING.md): detailed local run instructions.
+- [RUNNING.md](RUNNING.md): detailed run instructions for both local and Google Colab environments.
 
 ## Setup
 
