@@ -8,45 +8,28 @@ This project analyzes environmental drivers of respiratory disease across 25 dis
 - [EDA-and-Analysis-3/research_analysis_final.py](EDA-and-Analysis-3/research_analysis_final.py): generates the engineered dataset.
 - [Model/model_pipeline.py](Model/model_pipeline.py): trains the model and produces the final outputs.
 - [requirements.txt](requirements.txt): pinned Python dependencies.
-- [RUNNING.md](RUNNING.md): detailed run instructions for both local and Google Colab environments.
+- [RUNNING.md](RUNNING.md): full run instructions for both local and Google Colab environments.
 
-## Setup
-
-Create and activate a Python 3.11 virtual environment, then install dependencies:
+## Quick Start (Local)
 
 ```bash
 py -3.11 -m venv .venv
 .\.venv\Scripts\activate
-python -m pip install --upgrade pip
 pip install -r requirements.txt
-```
-
-## Run
-
-Run the full pipeline from the project root:
-
-```bash
 python pipeline.py
 ```
 
-On Windows, you can also force the local environment explicitly:
+## Quick Start (Google Colab)
 
-```bash
-.\.venv\Scripts\python.exe pipeline.py
+Set Runtime version to **2026.04** (Runtime → Change runtime type), then:
+
+```python
+!git clone https://github.com/asfiahamed0404/Environmental-Drivers-of-Respiratory-Disease-Sri-Lanka.git
+%cd Environmental-Drivers-of-Respiratory-Disease-Sri-Lanka
+!python pipeline.py
 ```
 
-## Running on Google Colab
-
-1. **Runtime → Change runtime type** → Hardware accelerator: **CPU**, Runtime version: **2026.04** → Save.
-2. Clone the repo and enter it:
-   ```python
-   !git clone https://github.com/asfiahamed0404/Environmental-Drivers-of-Respiratory-Disease-Sri-Lanka.git
-   %cd Environmental-Drivers-of-Respiratory-Disease-Sri-Lanka
-   ```
-3. Run the pipeline:
-   ```python
-   !python pipeline.py
-   ```
+See [RUNNING.md](RUNNING.md) for full details, troubleshooting, and package version checks.
 
 ## What It Produces
 
@@ -60,4 +43,4 @@ The pipeline generates the engineered dataset, runs model training, computes SHA
 
 ## Reproducibility
 
-To reproduce the paper's exact reported numbers, run the pipeline on Google Colab (runtime snapshot **2026.04**) rather than a local environment.
+To reproduce the paper's exact reported numbers, run the pipeline on Google Colab (runtime snapshot **2026.04**) with the pinned package versions in [requirements.txt](requirements.txt) rather than a local environment.
